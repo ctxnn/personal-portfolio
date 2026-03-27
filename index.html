@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirag Taneja</title>
+    <meta name="description" content="Chirag Taneja, Building real-world AI solutions. Studying Robotics & AI at Thapar Institute. Builds deep learning systems from scratch.">
+    <meta name="keywords" content="Chirag Taneja, AI, Machine Learning, Deep Learning, PyTorch, GPT-2, Diffusion Models">
+    <meta property="og:title" content="Chirag Taneja">
+    <meta property="og:description" content="Building intelligence from first principles. Exploring real-world AI solutions.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom planet cursor -->
+    <div class="planet-cursor" id="planetCursor">
+        <div class="planet-cursor__body"></div>
+        <div class="planet-cursor__ring"></div>
+    </div>
+
+    <!-- Ambient glow effects -->
+    <div class="ambient-glow ambient-glow--top"></div>
+    <div class="ambient-glow ambient-glow--bottom"></div>
+    
+    <!-- Floating particles canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="#" class="nav__logo">CT</a>
+        <div class="nav__links">
+            <a href="#about" class="nav__link">About</a>
+            <a href="#projects" class="nav__link">Work</a>
+            <a href="#skills" class="nav__link">Skills</a>
+            <a href="#contact" class="nav__link">Contact</a>
+            
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero__orb-container">
+            <div class="hero__orb">
+                <div class="hero__orb-inner"></div>
+                <div class="hero__orb-ring hero__orb-ring--1"></div>
+                <div class="hero__orb-ring hero__orb-ring--2"></div>
+                <div class="hero__orb-ring hero__orb-ring--3"></div>
+            </div>
+        </div>
+        <div class="hero__content">
+            <h1 class="hero__name">
+                <span class="hero__name-first">Chirag</span>
+                <span class="hero__name-last">Taneja</span>
+            </h1>
+            <p class="hero__tagline">Building intelligence from first principles</p>
+        </div>
+        <div class="hero__scroll-indicator">
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="section__container">
+            <h2 class="section__label">About</h2>
+            <div class="about__content">
+                <div class="about__text">
+                    <p class="about__intro">
+                        I'm studying 
+                        <span class="highlight">Robotics & Artificial Intelligence</span> at 
+                        <span class="highlight">Thapar Institute of Engineering and Technology</span>. 
+                        I believe in understanding things deeply, which is why I build everything from scratch.
+                    </p>
+                    <p class="about__body">
+                        After spending months exploring deep learning from the ground up, building GPT-2, diffusion models, 
+                        autograd engines, and more, my current focus is on 
+                        <span class="highlight">making real-world solutions with AI</span>.
+                    </p>
+                    <p class="about__body">
+                        Currently serving as <span class="highlight">General Secretary</span> of the 
+                        <span class="highlight">Mecivions Research Society</span> at Thapar, where I help foster a community 
+                        of researchers and builders.
+                    </p>
+                    <p class="about__body about__cta">
+                        I'm <span class="highlight highlight--accent">actively looking for internships and opportunities</span>, 
+                        let's build something together.
+                    </p>
+                </div>
+                <div class="about__details">
+                    <div class="about__detail-card">
+                        <span class="about__detail-label">Location</span>
+                        <span class="about__detail-value">Patiala, India</span>
+                    </div>
+                    <div class="about__detail-card">
+                        <span class="about__detail-label">Education</span>
+                        <span class="about__detail-value">BE Robotics & AI '27</span>
+                    </div>
+                    <div class="about__detail-card">
+                        <span class="about__detail-label">Focus</span>
+                        <span class="about__detail-value">Real-World AI Solutions</span>
+                    </div>
+                    <div class="about__detail-card about__detail-card--accent">
+                        <span class="about__detail-label">Status</span>
+                        <span class="about__detail-value">Open to Internships</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="section__container">
+            <h2 class="section__label">Selected Work</h2>
+            
+            <div class="projects__grid">
+                <!-- Project 1: reifusion -->
+                <a href="https://github.com/ctxnn/reifusion" target="_blank" rel="noopener" class="project-card project-card--featured">
+                    <div class="project-card__number">01</div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">reifusion</h3>
+                        <p class="project-card__description">A complete Stable Diffusion pipeline implemented from scratch, U-Net, CLIP text encoder, VAE decoder, and DDPM noise scheduler. Built entirely in PyTorch to understand every component of modern image generation.</p>
+                        <div class="project-card__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Diffusion</span>
+                        </div>
+                    </div>
+                    <div class="project-card__arrow">↗</div>
+                </a>
+
+                <!-- Project 2: GPT-2 -->
+                <a href="https://github.com/ctxnn/gpt-2" target="_blank" rel="noopener" class="project-card project-card--featured">
+                    <div class="project-card__number">02</div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">GPT-2</h3>
+                        <p class="project-card__description">Trained GPT-2 from scratch using PyTorch with bfloat16 precision and flash attention for efficient compute. Leveraged torch.compile and extensive hyperparameter tuning. Competes with OpenAI's released GPT-2.</p>
+                        <div class="project-card__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Transformers</span>
+                        </div>
+                    </div>
+                    <div class="project-card__arrow">↗</div>
+                </a>
+
+                <!-- Project 3: toy-gpt -->
+                <a href="https://github.com/ctxnn/toy-gpt" target="_blank" rel="noopener" class="project-card">
+                    <div class="project-card__number">03</div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">toy-gpt</h3>
+                        <p class="project-card__description">Trained a toy decoder-only transformer on the Bhagavad Gita. A focused experiment in understanding how transformers learn to model language on a small, meaningful corpus.</p>
+                        <div class="project-card__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Transformers</span>
+                        </div>
+                    </div>
+                    <div class="project-card__arrow">↗</div>
+                </a>
+
+                <!-- Project 4: reigrad -->
+                <a href="https://github.com/ctxnn/reigrad" target="_blank" rel="noopener" class="project-card">
+                    <div class="project-card__number">04</div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">ReiGrad</h3>
+                        <p class="project-card__description">A fully custom automatic differentiation engine built from scratch. Implements reverse-mode differentiation supporting core tensor operations and neural network primitives.</p>
+                        <div class="project-card__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">NumPy</span>
+                            <span class="tag">AutoGrad</span>
+                        </div>
+                    </div>
+                    <div class="project-card__arrow">↗</div>
+                </a>
+
+                <!-- Project 5: Flappy Bird RL -->
+                <a href="https://github.com/ctxnn/flappy-bird-rl" target="_blank" rel="noopener" class="project-card">
+                    <div class="project-card__number">05</div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Flappy Bird RL</h3>
+                        <p class="project-card__description">Trained an AI agent to play Flappy Bird using Deep Q-Network (DQN). Experience replay, epsilon-greedy exploration, and frame preprocessing for temporal awareness.</p>
+                        <div class="project-card__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">RL</span>
+                        </div>
+                    </div>
+                    <div class="project-card__arrow">↗</div>
+                </a>
+            </div>
+
+            <!-- More work link -->
+            <div class="projects__more">
+                <a href="https://github.com/ctxnn?tab=repositories" target="_blank" rel="noopener" class="projects__more-link">
+                    View all 38 repositories on GitHub
+                    <span class="projects__more-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="section__container">
+            <h2 class="section__label">Technical Arsenal</h2>
+            <div class="skills__grid">
+                <div class="skill-group">
+                    <h3 class="skill-group__title">Languages</h3>
+                    <div class="skill-group__items">
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">C++</span>
+                        <span class="skill-pill">C</span>
+                        <span class="skill-pill">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skill-group__title">ML & Deep Learning</h3>
+                    <div class="skill-group__items">
+                        <span class="skill-pill">PyTorch</span>
+                        <span class="skill-pill">TensorFlow</span>
+                        <span class="skill-pill">Scikit-Learn</span>
+                        <span class="skill-pill">Hugging Face</span>
+                        <span class="skill-pill">Transformers</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skill-group__title">Tools & Frameworks</h3>
+                    <div class="skill-group__items">
+                        <span class="skill-pill">Git</span>
+                        <span class="skill-pill">Linux</span>
+                        <span class="skill-pill">Gradio</span>
+                        <span class="skill-pill">CLI</span>
+                        <span class="skill-pill">Jupyter</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skill-group__title">Libraries</h3>
+                    <div class="skill-group__items">
+                        <span class="skill-pill">NumPy</span>
+                        <span class="skill-pill">Pandas</span>
+                        <span class="skill-pill">Matplotlib</span>
+                        <span class="skill-pill">SciPy</span>
+                        <span class="skill-pill">Seaborn</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skill-group__title">Web</h3>
+                    <div class="skill-group__items">
+                        <span class="skill-pill">HTML</span>
+                        <span class="skill-pill">CSS</span>
+                        <span class="skill-pill">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="section__container">
+            <h2 class="section__label">Experience</h2>
+            <div class="experience__timeline">
+                <div class="experience__item">
+                    <div class="experience__date">Jun 2025 – Aug 2025</div>
+                    <div class="experience__details">
+                        <h3 class="experience__role">Research Intern</h3>
+                        <p class="experience__org">The University of Queensland · Brisbane, Australia</p>
+                        <p class="experience__desc">Conducted research on deepfake detection and explanation for social media video content. Developed AI explainability techniques and interpretable ML models for deepfake classification.</p>
+                    </div>
+                </div>
+                <div class="experience__item">
+                    <div class="experience__date">Jan 2026 – Present</div>
+                    <div class="experience__details">
+                        <h3 class="experience__role">General Secretary</h3>
+                        <p class="experience__org">Mecivions Research Society · Thapar Institute</p>
+                        <p class="experience__desc">Leading the research society, fostering a community of AI/ML researchers and builders at Thapar.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="section__container">
+            <h2 class="section__label">Get in Touch</h2>
+            <div class="contact__content">
+                <p class="contact__text">
+                    I'm <span class="highlight highlight--accent">actively looking for internships and opportunities</span>. 
+                    Open to discussing collaborations, research, or anything AI. Let's connect.
+                </p>
+                <div class="contact__links">
+                    <a href="mailto:chiragtaneja.work@gmail.com" class="contact__link">
+                        <span class="contact__link-label">Email</span>
+                        <span class="contact__link-value">chiragtaneja.work@gmail.com</span>
+                    </a>
+                    <a href="https://github.com/ctxnn" target="_blank" rel="noopener" class="contact__link">
+                        <span class="contact__link-label">GitHub</span>
+                        <span class="contact__link-value">ctxnn</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/chirag-taneja20" target="_blank" rel="noopener" class="contact__link">
+                        <span class="contact__link-label">LinkedIn</span>
+                        <span class="contact__link-value">chirag-taneja20</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <span class="footer__text">© 2026 Chirag Taneja</span>
+            <span class="footer__text">Built from scratch, obviously.</span>
+        </div>
+    </footer>
+
+    <!-- Scroll to top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <span class="scroll-top__arrow">↑</span>
+    </button>
+
+    <script src="main.js"></script>
+</body>
+</html>
