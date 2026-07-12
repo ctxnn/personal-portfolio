@@ -20,8 +20,9 @@ nav a[aria-current="page"] { color:var(--accent); }
 .hero-now .arrow-link { font-size:13px; }
 .kicker,.project-type,.project-number { margin:0; color:var(--soft); font-size:11px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
 h1,h2,p { margin-top:0; }
+.greeting { margin:0 0 0; font-size:16px; font-weight:500; color:var(--soft); letter-spacing:-.01em; }
 h1,h2 { color:var(--ink); }
-h1 { max-width:800px; margin:48px 0 40px; font-size:clamp(50px,8vw,104px); font-weight:600; letter-spacing:-.085em; line-height:.81; }
+h1 { max-width:800px; margin:16px 0 40px; font-size:clamp(50px,8vw,104px); font-weight:600; letter-spacing:-.085em; line-height:.81; }
 h1 em { color:var(--accent); font-style:normal; font-weight:400; }
 .hero-detail { display:flex; flex-direction:column; align-items:center; gap:8px; max-width:560px; margin-top:24px; }
 .hero-detail p { margin:0; font-size:22px; letter-spacing:-.022em; line-height:1.45; }
