@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Selected work by Chirag Taneja.">
+  <meta name="theme-color" content="#f6f3ed">
+  <title>Work — Chirag Taneja</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header class="site-header">
+      <a class="wordmark" href="index.html">Chirag Taneja<span>.</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a aria-current="page" href="work.html">Work</a>
+        <a href="chirag_resume_march_2026.pdf" target="_blank" rel="noreferrer">Résumé <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="work-hero" aria-labelledby="work-title">
+        <p class="kicker">Selected work</p>
+        <h1 id="work-title">Things I’ve<br>built <em>to learn.</em></h1>
+      </section>
+
+      <section class="project-list" aria-label="Projects">
+        <article class="project-row">
+          <p class="project-number">01</p>
+          <div>
+            <p class="project-type">Agentic systems · 2026</p>
+            <h2>Reisearch</h2>
+            <p>A multi-agent deep research system that turns a vague prompt into scoped research tasks and a grounded markdown report. Built around LangGraph subgraphs, a supervisor-worker design, resilient retries, and evaluation.</p>
+            <ul class="tags"><li>Python</li><li>LangGraph</li><li>Groq</li><li>Tavily</li></ul>
+          </div>
+          <a class="project-out" href="https://github.com/ctxnn/deepresearch-agent" target="_blank" rel="noreferrer" aria-label="View Reisearch on GitHub">↗</a>
+        </article>
+        <article class="project-row">
+          <p class="project-number">02</p>
+          <div>
+            <p class="project-type">Agentic systems · 2026</p>
+            <h2>Tri-modal AI agent</h2>
+            <p>A LangGraph agent with separate chat, retrieval, and code modes. A human-in-the-loop approval gate keeps autonomous code execution intentional.</p>
+            <ul class="tags"><li>Python</li><li>LangGraph</li><li>RAG</li><li>OpenRouter</li></ul>
+          </div>
+          <a class="project-out" href="https://github.com/ctxnn/CKC-agent" target="_blank" rel="noreferrer" aria-label="View Tri-modal AI agent on GitHub">↗</a>
+        </article>
+        <article class="project-row">
+          <p class="project-number">03</p>
+          <div>
+            <p class="project-type">Language models · 2025</p>
+            <h2>GPT-2 from scratch</h2>
+            <p>A hands-on GPT-2 implementation and training experiment on FineWeb-Edu, focused on the practical mechanics of transformer training and efficient compute.</p>
+            <ul class="tags"><li>Python</li><li>PyTorch</li><li>Flash attention</li><li>torch.compile</li></ul>
+          </div>
+          <a class="project-out" href="https://github.com/ctxnn/gpt-2" target="_blank" rel="noreferrer" aria-label="View GPT-2 from scratch on GitHub">↗</a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Chirag Taneja</span>
+      <a href="chirag_resume_march_2026.pdf" target="_blank" rel="noreferrer">Résumé</a>
+    </footer>
+  </div>
+  <div class="pixel-cat" aria-hidden="true"><i></i><b></b><em></em></div>
+  <script src="main.js"></script>
+</body>
+</html>
