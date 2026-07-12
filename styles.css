@@ -64,7 +64,7 @@ h2 { font-size:clamp(30px,4vw,47px); font-weight:550; letter-spacing:-.055em; li
 .pixel-cat i,.pixel-cat b,.pixel-cat em { position:absolute; display:block; }
 .pixel-cat i { z-index:2; top:10px; left:11px; width:2px; height:2px; background:var(--paper); box-shadow:10px 0 var(--paper); }
 .pixel-cat b { right:0; top:10px; width:9px; height:3px; background:var(--ink); transform:rotate(-23deg); transform-origin:left; animation:tail 1.25s ease-in-out infinite alternate; }
-.pixel-cat em { left:15px; top:15px; width:3px; height:2px; background:var(--accent-soft); }
+.pixel-cat em { left:15px; top:15px; width:3px; height:2px; background:#f2a7a7; }
 @keyframes cat-roam { 0% { transform:translateX(0); } 44% { transform:translateX(calc(100vw + 42px)); } 50% { transform:translateX(calc(100vw + 42px)) scaleX(-1); } 94% { transform:translateX(0) scaleX(-1); } 100% { transform:translateX(0); } }
 @keyframes tail { to { transform:rotate(19deg); } }
 @media (max-width:1200px) {
