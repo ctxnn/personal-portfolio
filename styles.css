@@ -1,4 +1,4 @@
-:root { --paper:#FDFBD4; --ink:#38240D; --soft:#713600; --line:rgba(113,54,0,.18); --accent:#C05800; --accent-soft:#F3DCC2; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--soft); background:var(--paper); }
+:root { --paper:#fbfbfd; --ink:#1d1d1f; --soft:#86868b; --line:rgba(0,0,0,.08); --accent:#0071e3; --accent-soft:#f5f5f7; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--soft); background:var(--paper); }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; min-width:320px; background:var(--paper); color:var(--soft); font-size:16px; line-height:1.55; }
@@ -36,13 +36,13 @@ h1 em { color:var(--accent); font-style:normal; font-weight:400; }
 h2 { font-size:clamp(30px,4vw,47px); font-weight:550; letter-spacing:-.055em; line-height:.98; }
 .section-title-row h2 { margin:13px 0 0; }
 .arrow-link { flex-shrink:0; font-size:13px; }
-.activity-frame { border:1px solid var(--line); padding:24px; background:rgba(192,88,0,.05); overflow-x:auto; }
+.activity-frame { border:1px solid var(--line); padding:24px; background:rgba(0,113,227,.03); overflow-x:auto; }
 .activity-meta { display:flex; justify-content:space-between; min-width:590px; margin-bottom:16px; color:var(--soft); font-size:12px; }
 .activity-grid { display:grid; grid-auto-columns:10px; grid-auto-flow:column; grid-template-rows:repeat(7,10px); gap:4px; min-width:590px; width:max-content; }
-.activity-cell { width:10px; height:10px; border-radius:2px; background:#EFE7B0; }
-.activity-cell[data-level="1"] { background:#E7C49A; }
-.activity-cell[data-level="2"] { background:#D89E63; }
-.activity-cell[data-level="3"] { background:#C77A33; }
+.activity-cell { width:10px; height:10px; border-radius:2px; background:#eaeaec; }
+.activity-cell[data-level="1"] { background:#b3d4f7; }
+.activity-cell[data-level="2"] { background:#6cb4f0; }
+.activity-cell[data-level="3"] { background:#2997ff; }
 .activity-cell[data-level="4"] { background:var(--accent); }
 .activity-note { min-width:590px; margin:16px 0 0; color:var(--soft); font-size:12px; }
 .site-footer { display:flex; justify-content:space-between; padding:24px 0 34px; color:var(--soft); font-size:12px; }
