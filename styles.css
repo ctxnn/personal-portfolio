@@ -26,8 +26,9 @@ h1 em { color:var(--accent); font-style:normal; font-weight:400; }
 .hero-detail { display:flex; flex-direction:column; align-items:center; gap:8px; max-width:560px; margin-top:24px; }
 .hero-detail p { margin:0; font-size:22px; letter-spacing:-.022em; line-height:1.45; }
 .hero-detail .institution { color:var(--soft); font-size:12px; letter-spacing:.01em; }
+.institution { margin:40px 0 0; color:var(--soft); font-size:13px; letter-spacing:.01em; line-height:1.5; text-align:center; }
 .institution span { color:var(--soft); }
-.hero-links { display:flex; flex-wrap:wrap; gap:10px 23px; margin-top:56px; font-size:13px; }
+.hero-links { display:flex; flex-wrap:wrap; gap:10px 23px; margin-top:16px; font-size:13px; }
 .hero-links a,.arrow-link { text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:4px; }
 .arrow-link { color:var(--accent); }
 .hero-links .resume-link { color:var(--accent); }
