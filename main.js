@@ -1,3 +1,33 @@
+/* ── Theme toggle ──────────────────────────────────── */
+(function () {
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = saved || (prefersDark ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', theme);
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.content = theme === 'dark' ? '#000000' : '#fbfbfd';
+})();
+
+const toggleBtn = document.getElementById('themeToggle');
+if (toggleBtn) {
+  function applyIcon() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    toggleBtn.textContent = isDark ? '☀️' : '🌙';
+    toggleBtn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+  applyIcon();
+  toggleBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const next = isDark ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = next === 'dark' ? '#000000' : '#fbfbfd';
+    applyIcon();
+  });
+}
+
+/* ── Footer year ──────────────────────────────────── */
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
 
