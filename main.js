@@ -1,8 +1,6 @@
 /* ── Theme toggle ──────────────────────────────────── */
 (function () {
-  const saved = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const theme = saved || (prefersDark ? 'dark' : 'light');
+  const theme = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', theme);
   const meta = document.querySelector('meta[name="theme-color"]');
   if (meta) meta.content = theme === 'dark' ? '#000000' : '#fbfbfd';
