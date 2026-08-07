@@ -3,9 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Selected work by Chirag Taneja.">
+  <meta name="description" content="Selected AI systems and language-model work by Chirag Taneja.">
   <meta name="theme-color" content="#fbfbfd">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://ctxnn.github.io/personal-portfolio/work.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Chirag Taneja">
+  <meta property="og:title" content="Selected Work — Chirag Taneja">
+  <meta property="og:description" content="Agentic research systems, retrieval agents, and language models built from first principles.">
+  <meta property="og:url" content="https://ctxnn.github.io/personal-portfolio/work.html">
+  <meta property="og:image" content="https://ctxnn.github.io/personal-portfolio/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Selected work by Chirag Taneja">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Selected Work — Chirag Taneja">
+  <meta name="twitter:description" content="Agentic research systems, retrieval agents, and language models built from first principles.">
+  <meta name="twitter:image" content="https://ctxnn.github.io/personal-portfolio/og-image.png">
+  <meta name="twitter:image:alt" content="Selected work by Chirag Taneja">
   <title>Work — Chirag Taneja</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="work">
@@ -17,7 +36,10 @@
         <a href="index.html">Home</a>
         <a aria-current="page" href="work.html">Work</a>
         <a href="Chirag_Taneja_Resume_Final_August.pdf" target="_blank" rel="noreferrer">Résumé <span aria-hidden="true">↗</span></a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode">
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.2A8 8 0 0 1 8.8 3.8a8.5 8.5 0 1 0 11.4 11.4Z"/></svg>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></svg>
+        </button>
       </nav>
     </header>
 
@@ -33,30 +55,38 @@
           <div>
             <p class="project-type">Agentic systems · 2026</p>
             <h2>Reisearch</h2>
-            <p>A multi-agent deep research system that turns a vague prompt into scoped research tasks and a grounded markdown report. Built around LangGraph subgraphs, a supervisor-worker design, resilient retries, and evaluation.</p>
+            <p>Architected a supervisor-worker system that turns vague questions into scoped briefs, parallel research tasks, and source-grounded Markdown reports. Added checkpointed recovery, backoff retries, and LangSmith evaluations for resilient, repeatable research.</p>
             <ul class="tags"><li>Python</li><li>LangGraph</li><li>Groq</li><li>Tavily</li></ul>
           </div>
-          <a class="project-out" href="https://github.com/ctxnn/deepresearch-agent" target="_blank" rel="noreferrer" aria-label="View Reisearch on GitHub">↗</a>
+          <div class="project-actions">
+            <a class="project-out" href="https://github.com/ctxnn/deepresearch-agent" target="_blank" rel="noreferrer" aria-label="View Reisearch on GitHub"><span>View on GitHub</span><b aria-hidden="true">↗</b></a>
+            <a class="project-secondary" href="https://drive.google.com/file/d/1elC9nwQzFdYbbjlPe7gA7SgOvIEFv1Pq/view?usp=sharing" target="_blank" rel="noreferrer" aria-label="Watch the Reisearch demo video"><span>Watch demo</span><b aria-hidden="true">▶</b></a>
+          </div>
         </article>
         <article class="project-row">
           <p class="project-number">02</p>
           <div>
             <p class="project-type">Agentic systems · 2026</p>
             <h2>Tri-modal AI agent</h2>
-            <p>A LangGraph agent with separate chat, retrieval, and code modes. A human-in-the-loop approval gate keeps autonomous code execution intentional.</p>
+            <p>Built a LangGraph state machine that routes chat, RAG, and sandboxed code execution, with human approval before autonomous actions. Added custom vector retrieval, isolated subprocess workspaces, and persistent agent memory.</p>
             <ul class="tags"><li>Python</li><li>LangGraph</li><li>RAG</li><li>OpenRouter</li></ul>
           </div>
-          <a class="project-out" href="https://github.com/ctxnn/CKC-agent" target="_blank" rel="noreferrer" aria-label="View Tri-modal AI agent on GitHub">↗</a>
+          <div class="project-actions">
+            <a class="project-out" href="https://github.com/ctxnn/CKC-agent" target="_blank" rel="noreferrer" aria-label="View Tri-modal AI agent on GitHub"><span>View on GitHub</span><b aria-hidden="true">↗</b></a>
+          </div>
         </article>
         <article class="project-row">
           <p class="project-number">03</p>
           <div>
             <p class="project-type">Language models · 2025</p>
             <h2>GPT-2 from scratch</h2>
-            <p>A hands-on GPT-2 implementation and training experiment on FineWeb-Edu, focused on the practical mechanics of transformer training and efficient compute.</p>
+            <p>Implemented and pretrained a 124M-parameter GPT-2 from random initialization on 9.99B FineWeb-Edu tokens using an H100. Reached 3.03 validation loss, 20.71 perplexity, and 30.03% HellaSwag accuracy, with resumable checkpoints and a public Gradio demo.</p>
             <ul class="tags"><li>Python</li><li>PyTorch</li><li>Flash attention</li><li>torch.compile</li></ul>
           </div>
-          <a class="project-out" href="https://github.com/ctxnn/gpt-2" target="_blank" rel="noreferrer" aria-label="View GPT-2 from scratch on GitHub">↗</a>
+          <div class="project-actions">
+            <a class="project-out" href="https://github.com/ctxnn/gpt-2" target="_blank" rel="noreferrer" aria-label="View GPT-2 from scratch on GitHub"><span>View on GitHub</span><b aria-hidden="true">↗</b></a>
+            <a class="project-secondary" href="https://ctxnn.github.io/gpt-2/" target="_blank" rel="noreferrer" aria-label="Read the GPT-2 model card"><span>Model card</span><b aria-hidden="true">↗</b></a>
+          </div>
         </article>
       </section>
     </main>

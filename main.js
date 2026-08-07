@@ -10,7 +10,6 @@ const toggleBtn = document.getElementById('themeToggle');
 if (toggleBtn) {
   function applyIcon() {
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    toggleBtn.textContent = isDark ? '☀️' : '🌙';
     toggleBtn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
   }
   applyIcon();
@@ -30,6 +29,7 @@ const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
 
 const grid = document.getElementById('activityGrid');
+const activityScroll = document.getElementById('activityScroll');
 const total = document.getElementById('activity-total');
 const note = document.getElementById('activityNote');
 
@@ -53,6 +53,11 @@ function renderActivity(days, fallback = false) {
     grid.append(cell);
   });
   grid.setAttribute('aria-busy', 'false');
+  if (activityScroll && window.matchMedia('(max-width: 720px)').matches) {
+    requestAnimationFrame(() => {
+      activityScroll.scrollLeft = activityScroll.scrollWidth - activityScroll.clientWidth;
+    });
+  }
   const contributionCount = recentDays.reduce((sum, day) => sum + day.count, 0);
   if (total) total.textContent = fallback ? 'Activity graph unavailable' : `${contributionCount.toLocaleString()} public contributions`;
   if (note && fallback) note.textContent = 'Live activity could not load. Visit GitHub for the current graph.';
