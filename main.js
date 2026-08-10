@@ -25,21 +25,6 @@ if (toggleBtn) {
   });
 }
 
-/* Placeholder blog link */
-document.querySelectorAll('[data-blog-placeholder]').forEach((link) => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault();
-    link.animate(
-      [
-        { color: 'var(--muted)' },
-        { color: 'var(--signal)' },
-        { color: 'var(--muted)' }
-      ],
-      { duration: 700, easing: 'ease-out' }
-    );
-  });
-});
-
 /* Footer */
 document.querySelectorAll('#year').forEach((year) => {
   year.textContent = new Date().getFullYear();
