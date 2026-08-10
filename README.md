@@ -2,7 +2,7 @@
 
 Building intelligence from first principles. My personal slice of the internet, showcasing my work in Deep Learning, AI Research, and software engineering.
 
-**[🌐 View Live Site](https://ctxnn.github.io/)**
+**[🌐 View Live Site](https://ctxnn.github.io/personal-portfolio/)**
 
 ## ⚡ Features
 
