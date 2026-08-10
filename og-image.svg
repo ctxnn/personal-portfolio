@@ -7,7 +7,7 @@
   <text x="84" y="386" fill="#0071e3" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="82" font-weight="500" letter-spacing="-4">AI systems.</text>
   <text x="88" y="462" fill="#6e6e73" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="28">Agentic research tools, retrieval systems, and language models.</text>
   <line x1="84" y1="528" x2="1116" y2="528" stroke="#d2d2d7" stroke-width="2"/>
-  <text x="84" y="575" fill="#6e6e73" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="22">ctxnn.github.io/personal-portfolio</text>
+  <text x="84" y="575" fill="#6e6e73" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="22">ctxnn.github.io</text>
   <g transform="translate(976 76)">
     <rect width="140" height="140" rx="34" fill="#1d1d1f"/>
     <path d="M92 45c-5.7-6.6-14-10.3-23.4-10.3C50.2 34.7 37.2 48.7 37.2 68s13 33.3 31.4 33.3c10.1 0 18.6-3.9 24.1-11" fill="none" stroke="#fbfbfd" stroke-width="13" stroke-linecap="round"/>

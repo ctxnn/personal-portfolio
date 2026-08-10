@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A private, browser-local sketch of your visit to Chirag Taneja’s site.">
+  <meta name="theme-color" content="#f4f0e8">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://ctxnn.github.io/trail.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Chirag Taneja">
+  <meta property="og:title" content="Trail — Chirag Taneja">
+  <meta property="og:description" content="A private, browser-local sketch of your visit. Nothing is sent anywhere.">
+  <meta property="og:url" content="https://ctxnn.github.io/trail.html">
+  <meta property="og:image" content="https://ctxnn.github.io/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Trail — Chirag Taneja">
+  <meta name="twitter:description" content="A private, browser-local sketch of your visit. Nothing is sent anywhere.">
+  <meta name="twitter:image" content="https://ctxnn.github.io/og-image.png">
+  <title>Trail — Chirag Taneja</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Chirag — home"><span aria-hidden="true">✦</span>chirag</a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html">home</a>
+        <a href="work.html">work</a>
+        <a href="about.html">about</a>
+        <a aria-current="page" href="trail.html">trail</a>
+        <a href="#" data-blog-placeholder aria-label="Blog — coming soon">blog<small>soon</small></a>
+        <a href="Chirag_Taneja_Resume_Final_August.pdf" target="_blank" rel="noreferrer">Resume <span aria-hidden="true">↗</span></a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">◐</button>
+      </nav>
+    </header>
+
+    <main id="main" class="article-shell">
+      <section class="trail-page" aria-labelledby="trail-title">
+        <header class="trail-header">
+          <p class="eyebrow">visitor / trail</p>
+          <h1 id="trail-title">your tiny journey through this site.</h1>
+          <p class="trail-lead">A private, browser-local sketch of this visit. Nothing is sent anywhere.</p>
+        </header>
+
+        <section class="interaction-log" data-interaction-dashboard aria-labelledby="interaction-title">
+          <div class="interaction-heading">
+            <h2 id="interaction-title" class="visually-hidden">Interaction metrics</h2>
+            <span class="live-label"><i aria-hidden="true"></i> live</span>
+          </div>
+
+          <div class="stat-grid">
+            <article class="stat-card" data-metric="clicks">
+              <header><span>clicks</span><strong data-metric-value>0</strong></header>
+              <div class="chart-wrap">
+                <svg viewBox="0 0 240 72" role="img" aria-label="Recent click activity">
+                  <path class="chart-grid" d="M0 18H240M0 36H240M0 54H240"></path>
+                  <path class="chart-area" data-chart-area></path>
+                  <polyline class="chart-line" data-chart-line points=""></polyline>
+                </svg>
+              </div>
+              <p>every deliberate click</p>
+            </article>
+
+            <article class="stat-card" data-metric="distance">
+              <header><span>mouse trail</span><strong data-metric-value>0 px</strong></header>
+              <div class="chart-wrap">
+                <svg viewBox="0 0 240 72" role="img" aria-label="Recent mouse movement">
+                  <path class="chart-grid" d="M0 18H240M0 36H240M0 54H240"></path>
+                  <path class="chart-area" data-chart-area></path>
+                  <polyline class="chart-line" data-chart-line points=""></polyline>
+                </svg>
+              </div>
+              <p>distance in screen pixels</p>
+            </article>
+
+            <article class="stat-card" data-metric="keys">
+              <header><span>keys pressed</span><strong data-metric-value>0</strong></header>
+              <div class="chart-wrap">
+                <svg viewBox="0 0 240 72" role="img" aria-label="Recent keyboard activity">
+                  <path class="chart-grid" d="M0 18H240M0 36H240M0 54H240"></path>
+                  <path class="chart-area" data-chart-area></path>
+                  <polyline class="chart-line" data-chart-line points=""></polyline>
+                </svg>
+              </div>
+              <p>non-repeating key strokes</p>
+            </article>
+          </div>
+
+          <div class="interaction-footer">
+            <span data-tracking-status>tracking only in this browser</span>
+            <button type="button" data-reset-interactions>reset my trail</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Chirag Taneja</p>
+      <button class="footer-cat-button" type="button" data-footer-cat aria-label="Pet the cat" aria-pressed="false" title="Pet the cat">
+        <span class="footer-cat-art" data-cat-face aria-hidden="true"> /\_/\
+( o.o )
+ &gt; ^ &lt;</span>
+        <span class="footer-cat-purr" aria-hidden="true">purr</span>
+        <span class="visually-hidden" data-cat-status aria-live="polite"></span>
+      </button>
+    </footer>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
