@@ -244,6 +244,7 @@ const grid = document.getElementById('activityGrid');
 const activityScroll = document.getElementById('activityScroll');
 const total = document.getElementById('activity-total');
 const note = document.getElementById('activityNote');
+const activityUpdated = document.getElementById('activity-updated');
 
 function levelFor(count) {
   if (count === 0) return 0;
@@ -253,7 +254,13 @@ function levelFor(count) {
   return 4;
 }
 
-function renderActivity(days, fallback = false) {
+function formatSnapshotDate(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return 'local snapshot';
+  return `updated ${date.toLocaleDateString('en', { month: 'short', day: 'numeric' })}`;
+}
+
+function renderActivity(days, { fallback = false, updatedAt = null } = {}) {
   if (!grid) return;
   grid.replaceChildren();
   const recentDays = days.slice(-364);
@@ -272,7 +279,10 @@ function renderActivity(days, fallback = false) {
   }
   const contributionCount = recentDays.reduce((sum, day) => sum + day.count, 0);
   if (total) total.textContent = fallback ? 'activity graph unavailable' : `${contributionCount.toLocaleString()} public contributions`;
-  if (note && fallback) note.textContent = 'live activity could not load. visit GitHub for the current graph.';
+  if (activityUpdated) activityUpdated.textContent = fallback ? 'snapshot unavailable' : formatSnapshotDate(updatedAt);
+  if (note) note.textContent = fallback
+    ? 'the local activity snapshot is missing. visit GitHub for the current graph.'
+    : 'public GitHub contribution snapshot — loaded locally.';
 }
 
 function fallbackDays() {
@@ -280,18 +290,16 @@ function fallbackDays() {
 }
 
 if (grid) {
-  renderActivity(fallbackDays());
-  fetch('https://github-contributions-api.jogruber.de/v4/ctxnn?y=last')
-    .then((response) => {
-      if (!response.ok) throw new Error('Contribution request failed');
-      return response.json();
-    })
-    .then((data) => {
-      const contributions = data.contributions?.map(({ date, count }) => ({ date, count: Number(count) || 0 }));
-      if (!contributions?.length) throw new Error('No contribution data');
-      renderActivity(contributions);
-    })
-    .catch(() => renderActivity(fallbackDays(), true));
+  const snapshot = window.__GITHUB_ACTIVITY__;
+  const contributions = snapshot?.days
+    ?.map(({ date, count }) => ({ date, count: Number(count) || 0 }))
+    .filter(({ date }) => typeof date === 'string');
+
+  if (contributions?.length) {
+    renderActivity(contributions, { updatedAt: snapshot.updatedAt });
+  } else {
+    renderActivity(fallbackDays(), { fallback: true });
+  }
 }
 
 /* Browser-local interaction trail */
