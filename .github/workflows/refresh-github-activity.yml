@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: refresh-github-activity
@@ -25,9 +26,11 @@ jobs:
         run: node scripts/update-github-activity.mjs
 
       - name: Commit an updated snapshot
+        id: snapshot
         run: |
           if git diff --quiet -- github-activity.js; then
             echo "The contribution snapshot is already current."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
@@ -36,3 +39,10 @@ jobs:
           git add github-activity.js
           git commit -m "chore: refresh GitHub activity snapshot"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Rebuild the GitHub Pages site
+        if: steps.snapshot.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
